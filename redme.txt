@@ -1,0 +1,6 @@
+Had Completes First 5 Section including header with responsive 4k to Mobile [425px] Screen
+Used Tailwind as CDN For Quick Implementations
+Maintained Sperate Css file for variables Path "assets > style > variables > variables.css"
+For Slider Use Slick Slider Link: https://kenwheeler.github.io/slick/
+
+You can also access templete from: https://parin.in/Interview/

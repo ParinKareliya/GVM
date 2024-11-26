@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -36,16 +36,29 @@
                     <div class="logo-text"><span>Collers</span></div>
                 </div>
 
-                <div class="navigation-wrapper flex flex-row justify-between items-center">
-                    <a href="">products</a>
-                    <a href="">solution</a>
-                    <a href="">pricing</a>
-                    <a href="">resources</a>
-                    <a href="">log in</a>
+                <div class="navigation-wrapper desktop flex flex-row justify-between items-center">
+                    <a href="javascript:void(0)">products</a>
+                    <a href="javascript:void(0)">solution</a>
+                    <a href="javascript:void(0)">pricing</a>
+                    <a href="javascript:void(0)">resources</a>
+                    <a href="javascript:void(0)">log in</a>
                     <div class="button-wrapper">
                         <button class="btn btn-primary rounded-lg">Sign up now</button>
                     </div>
                 </div>
+
+                <div class="navigation-wrapper mobile flex flex-col justify-between items-center">
+                    <a href="javascript:void(0)">products</a>
+                    <a href="javascript:void(0)">solution</a>
+                    <a href="javascript:void(0)">pricing</a>
+                    <a href="javascript:void(0)">resources</a>
+                    <a href="javascript:void(0)">log in</a>
+                    <div class="button-wrapper">
+                        <button class="btn btn-primary rounded-lg">Sign up now</button>
+                    </div>
+                </div>
+
+                <div class="menu"><img src="assets/images/menu.png" alt="menu"></div>
             </div>
         </div>
     </section>
@@ -136,7 +149,6 @@
         </div>
     </section>
 
-
     <section class="best-product-section">
         <div class="container">
             <div class="heading-wrapper flex flex-row flex-wrap items-center justify-between content-center mb-[81px]">
@@ -147,7 +159,7 @@
                 </div>
             </div>
 
-            <div class="product-card-wrapper flex flex-row flex-wrap justify-between content-start items-start">
+            <div class="product-card-wrapper flex flex-row justify-between content-start items-start">
                 <div class="card">
                     <div class="img-wrapper">
                         <img src="assets/images/product-images/product-one.png" alt="product-one">
@@ -396,8 +408,8 @@
 
     </section>
 
-
-
+    <div class="backdrop"></div>
+    
     <!-- Script -->
     <script src="assets/script/script.js"></script>
 
@@ -409,21 +421,21 @@
             slidesToShow: 3,
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: 1125,
                     settings: {
                         arrows: false,
                         centerMode: true,
                         // centerPadding: '40px',
-                        slidesToShow: 3
+                        slidesToShow: 2
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 768,
                     settings: {
                         arrows: false,
                         centerMode: true,
                         centerPadding: '40px',
-                        slidesToShow: 1
+                        slidesToShow: 0.5
                     }
                 }
             ]
