@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
-  --primary-color: #FFFBEB;
+  --primary-color: #fffbeb;
   --secondary-color: #78350f;
   --section-background-color: #0f172a;
   --font-family: "Roboto", "Poppins";
@@ -95,6 +95,21 @@ body section .container .header .navigation-wrapper a {
   letter-spacing: 0.5px;
   color: var(--secondary-color);
   text-transform: capitalize;
+  position: relative;
+}
+body section .container .header .navigation-wrapper a::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all 0.5s ease-in-out;
+}
+body section .container .header .navigation-wrapper a:hover::after {
+  width: 100%;
 }
 body section.hero-section {
   background-image: url(../images/hero-background.png);
@@ -200,11 +215,19 @@ body section.best-product-section .container .heading-wrapper .button-wrapper .b
 body section.best-product-section .container .heading-wrapper .button-wrapper .btn.btn-primary:hover {
   border-color: var(--secondary-color);
 }
+body section.best-product-section .container .product-card-wrapper {
+  margin: -28px -35px;
+  padding: 28px 35px;
+  background-image: url(../images/Backlights.png);
+  background-size: cover;
+  background-position: center;
+}
 body section.best-product-section .container .product-card-wrapper .card {
   max-width: 394.67px;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+  box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.07), 0px 25px 50px -12px rgb(87, 87, 87);
 }
 body section.best-product-section .container .product-card-wrapper .card .card-content-wraper {
   padding: 30px;
@@ -215,19 +238,20 @@ body section.best-product-section .container .product-card-wrapper .card .card-c
   justify-content: flex-start;
   align-items: stretch;
   gap: 20px;
+  background-color: var(--section-background-color);
 }
 body section.best-product-section .container .product-card-wrapper .card .card-content-wraper .title {
   font-size: var(--text-large);
   font-weight: 700;
   line-height: 26.4px;
   color: var(--white);
-  margin-bottom: 10px;
 }
 body section.best-product-section .container .product-card-wrapper .card .card-content-wraper .content p {
   font-size: var(--text-xxl);
   font-weight: 400;
   line-height: 28.8px;
   color: var(--white);
+  margin-bottom: 10px;
 }
 body section.best-product-section .container .product-card-wrapper .card .card-content-wraper .button-wrapper .btn {
   width: 100%;
@@ -236,4 +260,165 @@ body section.best-product-section .container .product-card-wrapper .card .card-c
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.5px;
+  border-color: var(--white);
+  color: var(--white);
+}
+body section.best-product-section .container .product-card-wrapper .card .card-content-wraper .button-wrapper .btn.btn-primary:hover {
+  border-color: var(--secondary-color);
+}
+body section.why-joinus-section .container {
+  padding: 160px 80px;
+}
+body section.why-joinus-section .container .card {
+  background-color: var(--white);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 61px 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 500px;
+}
+body section.why-joinus-section .container .card .card-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+body section.why-joinus-section .container .card .card-content h3 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 61.6px;
+}
+body section.why-joinus-section .container .card .card-content ul {
+  list-style-image: url("../images/svg/list-style-icon.svg");
+  padding: 0 0 0 24px;
+}
+body section.why-joinus-section .container .card .card-content ul li {
+  font-size: var(--text-xxxl);
+  font-weight: 400;
+  line-height: 36px;
+  padding-left: 7px;
+}
+body section.why-joinus-section .container .card .card-content .button-wrapper .btn {
+  padding: 14px 30px;
+  font-size: var(--text-xxxl);
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+body section.why-joinus-section .container .card .img-wrapper {
+  max-width: 595px;
+  margin-right: -37px;
+  margin-top: 48px;
+  position: relative;
+  overflow: visible;
+}
+body section.why-joinus-section .container .card .img-wrapper::after {
+  content: "";
+  background-image: url(../images/why-join-us-background.png);
+  width: 713px;
+  height: 625px;
+  display: block;
+  top: -119px;
+  left: -37px;
+  position: absolute;
+  overflow: unset;
+  background-size: cover;
+  background-position: center;
+}
+body section.why-joinus-section .container .card .img-wrapper img {
+  position: relative;
+  z-index: 5;
+}
+body section.because-they-love-us .container {
+  padding: 80px 80px 42px 80px;
+}
+body section.because-they-love-us .container .heading-wrapper h2 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 61.6px;
+  color: var(--section-background-color);
+}
+body section.because-they-love-us .testimonial-wrapper {
+  position: relative;
+  padding-top: 36px;
+  background-image: url(../images/testimonial-background.png);
+  background-size: 94% 86%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+body section.because-they-love-us .testimonial-wrapper .slick-list.draggable {
+  padding: 0 60px 20px !important;
+}
+body section.because-they-love-us .testimonial-wrapper .slick-arrow {
+  position: absolute;
+}
+body section.because-they-love-us .testimonial-wrapper .slick-arrow::before {
+  content: unset;
+}
+body section.because-they-love-us .testimonial-wrapper .slick-arrow.slick-prev {
+  top: -73px;
+  right: 150px;
+  left: unset;
+  background-image: url(../images/svg/previous.svg);
+  background-size: contain;
+  width: 52px;
+  height: 52px;
+  background-repeat: no-repeat;
+}
+body section.because-they-love-us .testimonial-wrapper .slick-arrow.slick-next {
+  top: -73px;
+  right: 78px;
+  background-image: url(../images/svg/next.svg);
+  background-size: contain;
+  width: 52px;
+  height: 52px;
+  background-repeat: no-repeat;
+}
+body section.because-they-love-us .testimonial-wrapper .card {
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.07), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  background-color: var(--white);
+  border-radius: 20px;
+  max-width: 384px;
+  width: 100%;
+  padding: 46px 33px 33px 33px;
+  margin: 0 12px;
+}
+body section.because-they-love-us .testimonial-wrapper .card .logo-wrapper {
+  height: 32px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 32px;
+}
+body section.because-they-love-us .testimonial-wrapper .card .logo-wrapper img {
+  height: 100%;
+}
+body section.because-they-love-us .testimonial-wrapper .card .content-wrapper {
+  margin-bottom: 31px;
+}
+body section.because-they-love-us .testimonial-wrapper .card .content-wrapper p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38.4px;
+}
+body section.because-they-love-us .testimonial-wrapper .card .client-wrapper .img-wrapper {
+  width: 64px;
+  height: 64px;
+}
+body section.because-they-love-us .testimonial-wrapper .card .client-wrapper .tesimonial-name-wrapper h5 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+body section.because-they-love-us .testimonial-wrapper .card .client-wrapper .tesimonial-name-wrapper span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
+  color: rgb(71, 85, 105);
 }/*# sourceMappingURL=style.css.map */

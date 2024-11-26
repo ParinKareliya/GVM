@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
-    --primary-color: #FFFBEB;
+    --primary-color: #fffbeb;
     --secondary-color: #78350f;
     --section-background-color: #0f172a;
     --font-family: "Roboto", "Poppins";
@@ -57,25 +57,24 @@ img {
         justify-content: center;
         align-items: center;
         gap: 8px;
-    
+
         &.btn-primary {
             border: 2px solid var(--secondary-color);
-    
+
             &:hover {
                 background-color: var(--secondary-color);
                 color: var(--white);
             }
         }
-    
+
         &.btn-secondary {
             border: 2px solid transparent;
-    
+
             &:hover {
                 border: 2px solid var(--secondary-color);
             }
         }
     }
-
 }
 
 body {
@@ -108,6 +107,25 @@ body {
                         letter-spacing: 0.5px;
                         color: var(--secondary-color);
                         text-transform: capitalize;
+                        position: relative;
+                        
+                        &::after {
+                            content: "";
+                            width: 0;
+                            height: 2px;
+                            background-color: var(--secondary-color);
+                            position: absolute;
+                            bottom: -4px;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            transition: all 0.5s ease-in-out;
+                        }
+
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
                     }
                 }
             }
@@ -174,7 +192,6 @@ body {
                     }
                 }
 
-
                 .hero-card {
                     max-width: 373.33px;
                     width: 100%;
@@ -204,7 +221,6 @@ body {
                             font-weight: 500;
                             line-height: 22px;
                         }
-
                     }
 
                     .content {
@@ -217,7 +233,6 @@ body {
                 }
             }
         }
-
 
         &.best-product-section {
             background-color: var(--section-background-color);
@@ -238,13 +253,12 @@ body {
                             font-weight: 700;
                             line-height: 24px;
                             letter-spacing: 0.5px;
-                            
+
                             &.btn-primary {
                                 border-color: var(--white);
                                 color: var(--white);
                                 padding: 18px 46px;
-    
-    
+
                                 &:hover {
                                     border-color: var(--secondary-color);
                                 }
@@ -253,13 +267,21 @@ body {
                     }
                 }
 
-
                 .product-card-wrapper {
+                    margin: -28px -35px;
+                    padding: 28px 35px;
+                    background-image: url(../images/Backlights.png);
+                    background-size: cover;
+                    background-position: center;
+
                     .card {
                         max-width: 394.67px;
                         width: 100%;
                         border-radius: 8px;
                         overflow: hidden;
+                        box-shadow:
+                            0px 0px 15px 0px rgba(255, 255, 255, 0.07),
+                            0px 25px 50px -12px rgb(87 87 87);
 
                         .card-content-wraper {
                             padding: 30px;
@@ -270,24 +292,25 @@ body {
                             justify-content: flex-start;
                             align-items: stretch;
                             gap: 20px;
+                            background-color: var(--section-background-color);
 
                             .title {
                                 font-size: var(--text-large);
                                 font-weight: 700;
                                 line-height: 26.4px;
                                 color: var(--white);
-                                margin-bottom: 10px;
                             }
-    
+
                             .content {
                                 p {
                                     font-size: var(--text-xxl);
                                     font-weight: 400;
                                     line-height: 28.8px;
                                     color: var(--white);
+                                    margin-bottom: 10px;
                                 }
                             }
-    
+
                             .button-wrapper {
                                 .btn {
                                     width: 100%;
@@ -296,7 +319,212 @@ body {
                                     font-weight: 500;
                                     line-height: 24px;
                                     letter-spacing: 0.5px;
+                                    border-color: var(--white);
+                                    color: var(--white);
+
+                                    &.btn-primary {
+                                        &:hover {
+                                            border-color: var(--secondary-color);
+                                        }
+                                    }
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        &.why-joinus-section {
+            .container {
+                padding: 160px 80px;
+
+                .card {
+                    background-color: var(--white);
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.07), 0px 20px 25px -5px rgba(0, 0, 0, 0.1);
+                    border-radius: 30px;
+                    padding: 61px 80px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 500px;
+                    
+                    .card-content {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        align-content: flex-start;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 24px;
+                        width: 100%;
+
+                        h3 {
+                            font-size: 56px;
+                            font-weight: 800;
+                            line-height: 61.6px;
+                        }
+    
+                        ul {
+                            list-style-image: url('../images/svg/list-style-icon.svg');
+                            padding: 0 0 0 24px;
+                            
+                            li {
+                                font-size: var(--text-xxxl);
+                                font-weight: 400;
+                                line-height: 36px;
+                                padding-left: 7px;
+                            }
+                        }
+    
+    
+                        .button-wrapper {
+                            .btn {
+                                padding: 14px 30px;
+                                font-size: var(--text-xxxl);
+                                font-weight: 500;
+                                line-height: 24px;
+                                letter-spacing: 0.5px;
+                            }
+                        }
+                    }
+
+                    .img-wrapper {
+                        max-width: 595px;
+                        margin-right: -37px;
+                        margin-top: 48px;
+                        position: relative;
+                        overflow: visible;
+
+                        &::after {
+                            content: "";
+                            background-image: url(../images/why-join-us-background.png);
+                            width: 713px;
+                            height: 625px;
+                            display: block;
+                            top: -119px;
+                            left: -37px;
+                            position: absolute;
+                            overflow: unset;
+                            background-size: cover;
+                            background-position: center;
+                        }
+
+                        img {
+                            position: relative;
+                            z-index: 5;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &.because-they-love-us {
+            .container {
+                padding: 80px 80px 42px 80px;
+
+                .heading-wrapper {
+                    h2 {
+                        font-size: 56px;
+                        font-weight: 800;
+                        line-height: 61.6px;
+                        color: var(--section-background-color);
+                    }
+                }
+            }
+
+            .testimonial-wrapper {
+                position: relative;
+                padding-top: 36px;
+                background-image: url(../images/testimonial-background.png);
+                background-size: 94% 86%;
+                background-repeat: no-repeat;
+                background-position: top center;
+
+                .slick-list.draggable {
+                    padding: 0 60px 20px !important;
+                }
+
+                .slick-arrow {
+                    position: absolute;
+
+                    &::before {
+                        content: unset;
+                    }
+                    
+                    &.slick-prev {
+                        top: -73px;
+                        right: 150px;
+                        left: unset;
+                        background-image: url(../images/svg/previous.svg);
+                        background-size: contain;
+                        width: 52px;
+                        height: 52px;
+                        background-repeat: no-repeat;
+                    }
+
+                    &.slick-next {
+                        top: -73px;
+                        right: 78px;
+                        background-image: url(../images/svg/next.svg);
+                        background-size: contain;
+                        width: 52px;
+                        height: 52px;
+                        background-repeat: no-repeat;
+                    }
+                }
+
+
+                .card {
+                    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.07), 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+                    background-color: var(--white);
+                    border-radius: 20px;
+                    max-width: 384px;
+                    width: 100%;
+                    padding: 46px 33px 33px 33px;
+                    margin: 0 12px;
+
+                    .logo-wrapper {
+                        height: 32px;
+                        width: fit-content;
+                        margin-bottom: 32px;
+
+                        img {
+                            height: 100%;
+                        }
+                    }
+
+                    .content-wrapper {
+                        margin-bottom: 31px;
+
+                        p {
+                            font-size: 24px;
+                            font-weight: 400;
+                            line-height: 38.4px;
+                        }
+                    }
+
+                    .client-wrapper {
+                        .img-wrapper {
+                            width: 64px;
+                            height: 64px;
+                        }
+
+                        .tesimonial-name-wrapper {
+                            h5 {
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 28.8px;
+                            }
+
+                            span {
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 22.4px;
+                                color: rgba(71, 85, 105, 1);
                             }
                         }
                     }
