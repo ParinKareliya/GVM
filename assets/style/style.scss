@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+    --primary-color: #FFFBEB;
+    --secondary-color: #78350f;
+    --section-background-color: #0f172a;
+    --font-family: "Roboto", "Poppins";
+
+    --white: #ffffff;
+    --black: #000000;
+
+    --font-color: #0f172a;
+
+    --text-small: 12px;
+    --text: 14px;
+    --text-xl: 16px;
+    --text-xxl: 18px;
+    --text-xxxl: 20px;
+    --text-large: 24px;
+    --text-exrt-large: 32px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    transition: all 0.3s ease-in-out;
+}
+
+img {
+    width: 100%;
+}
+
+// Button
+.button-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    .btn {
+        padding: 10px 26px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+        border-radius: 8px;
+        color: var(--secondary-color);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    
+        &.btn-primary {
+            border: 2px solid var(--secondary-color);
+    
+            &:hover {
+                background-color: var(--secondary-color);
+                color: var(--white);
+            }
+        }
+    
+        &.btn-secondary {
+            border: 2px solid transparent;
+    
+            &:hover {
+                border: 2px solid var(--secondary-color);
+            }
+        }
+    }
+
+}
+
+body {
+    background-color: var(--primary-color);
+
+    section {
+        .container {
+            margin: 0 auto;
+            max-width: 1440px;
+            width: 100%;
+            padding: 0 80px;
+
+            .header {
+                padding: 24px 0;
+
+                .logo-wrapper {
+                    font-size: var(--text-exrt-large);
+                    font-weight: 700;
+                    line-height: 1;
+                    color: var(--secondary-color);
+                }
+
+                .navigation-wrapper {
+                    gap: 32px;
+
+                    a {
+                        font-size: var(--text-xl);
+                        font-weight: 500;
+                        line-height: 1;
+                        letter-spacing: 0.5px;
+                        color: var(--secondary-color);
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+
+        &.hero-section {
+            background-image: url(../images/hero-background.png);
+            height: 100%;
+            width: 100%;
+            background-position: 40.6% center;
+
+            .container {
+                padding: 80px;
+
+                .hero-left {
+                    max-width: 714px;
+
+                    .heading {
+                        h1 {
+                            font-size: 72px;
+                            font-weight: 700;
+                            line-height: 1;
+                            color: var(--font-color);
+                        }
+                    }
+
+                    .content-wrapper {
+                        p {
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 28.8px;
+                            color: var(--font-color);
+                        }
+                    }
+
+                    .button-wrapper {
+                        .btn {
+                            font-size: var(--text-xxxl);
+                            padding: 15px 30px;
+                        }
+                    }
+                }
+
+                .hero-right {
+                    position: relative;
+
+                    .image-wrapper {
+                        max-width: 487px;
+                        width: 100%;
+                        z-index: 1;
+                        position: relative;
+                    }
+
+                    &::before {
+                        content: "";
+                        background-color: rgb(251, 191, 36);
+                        width: 367px;
+                        height: 372px;
+                        display: block;
+                        position: absolute;
+                        top: 52px;
+                        left: 52px;
+                        border-radius: 50px;
+                    }
+                }
+
+
+                .hero-card {
+                    max-width: 373.33px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-content: flex-start;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 16px;
+                    position: relative;
+
+                    .img-wrapper {
+                        width: 64px;
+                        height: 64px;
+
+                        .svg-icon-wrapper {
+                            position: absolute;
+                            top: 0;
+                            left: 26px;
+                        }
+                    }
+
+                    .heading {
+                        h5 {
+                            font-size: var(--text-xxxl);
+                            font-weight: 500;
+                            line-height: 22px;
+                        }
+
+                    }
+
+                    .content {
+                        p {
+                            font-size: var(--text-xxl);
+                            font-weight: 400;
+                            line-height: 28.8px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &.best-product-section {
+            background-color: var(--section-background-color);
+
+            .container {
+                padding: 80px;
+
+                .heading-wrapper {
+                    h2 {
+                        font-size: 56px;
+                        color: var(--white);
+                        line-height: 61.6px;
+                    }
+
+                    .button-wrapper {
+                        .btn {
+                            font-size: var(--text-large);
+                            font-weight: 700;
+                            line-height: 24px;
+                            letter-spacing: 0.5px;
+                            
+                            &.btn-primary {
+                                border-color: var(--white);
+                                color: var(--white);
+                                padding: 18px 46px;
+    
+    
+                                &:hover {
+                                    border-color: var(--secondary-color);
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+                .product-card-wrapper {
+                    .card {
+                        max-width: 394.67px;
+                        width: 100%;
+                        border-radius: 8px;
+                        overflow: hidden;
+
+                        .card-content-wraper {
+                            padding: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            align-content: flex-start;
+                            justify-content: flex-start;
+                            align-items: stretch;
+                            gap: 20px;
+
+                            .title {
+                                font-size: var(--text-large);
+                                font-weight: 700;
+                                line-height: 26.4px;
+                                color: var(--white);
+                                margin-bottom: 10px;
+                            }
+    
+                            .content {
+                                p {
+                                    font-size: var(--text-xxl);
+                                    font-weight: 400;
+                                    line-height: 28.8px;
+                                    color: var(--white);
+                                }
+                            }
+    
+                            .button-wrapper {
+                                .btn {
+                                    width: 100%;
+                                    padding: 14px 10px;
+                                    font-size: var(--text-xxxl);
+                                    font-weight: 500;
+                                    line-height: 24px;
+                                    letter-spacing: 0.5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
