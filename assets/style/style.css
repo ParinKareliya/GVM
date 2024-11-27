@@ -71,6 +71,10 @@ body {
   background-color: #fffbeb;
   overflow-x: hidden;
 }
+body.open {
+  overflow: hidden;
+  height: 100vh;
+}
 body section .container {
   margin: 0 auto;
   max-width: 1440px;

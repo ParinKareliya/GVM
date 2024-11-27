@@ -82,6 +82,11 @@ body {
     background-color: $primary-color;
     overflow-x: hidden;
 
+    &.open {
+        overflow: hidden;
+        height: 100vh;
+    }
+    
     section {
         .container {
             margin: 0 auto;
